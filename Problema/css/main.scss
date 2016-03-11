@@ -1,0 +1,188 @@
+body {
+  font-family: "Lato";
+}
+
+$text-box1: #3CB2F8;
+$text-box2: #FFF;
+$tex-section: #797A72;
+$responsive: 100%;
+
+img{
+	width: 66%;
+}
+
+span{
+	color: $text-box1;
+}
+
+.navbar{
+	border-radius: 0;
+	margin-bottom: 0;
+	border: none;
+}
+
+.navbar+section{
+	background-image: url("../images/1920x665-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	color:white;
+}
+
+.banner{
+	h1{
+		margin-bottom: 26px;
+	}
+}
+
+.banner-opaco{
+	background: rgba(0,0,0,0.5);
+	padding: 16% 0;
+}
+
+.banner{
+	p{
+		&:nth-child(4){
+			margin: 15px 0;
+		}
+	}
+}
+
+.banner{
+	p{
+		&:nth-child(4){
+			i{
+				margin-left: 25px;
+			}
+		}
+	}
+}
+
+@mixin button(){
+	padding: 10px 28px;
+    font-size: 15px;
+    line-height: 1.33;
+    border-radius: 22px 22px;
+    margin: 14px 0;
+}
+
+.btn{
+    @include button();
+}
+
+.btn-transparent{
+	@extend .btn;
+	background-color:transparent;
+	margin-left: 7px;
+	color: $text-box1;
+	border-color: $text-box1;
+}
+
+.btn-learn{
+	@extend .btn-transparent;
+	margin-left: 0px;
+}
+
+.btn-transparent{
+	&:hover{
+		background-color: $text-box1; 
+		color: $text-box2;
+	}
+}
+
+.imagen-responsive{
+	img{
+		width: $responsive;
+	}
+}
+
+section{
+	&:nth-child(3){
+		margin-top: 8%;
+		margin-bottom: 5%;
+		h1{
+			margin-top: 0;
+			margin-bottom: 5%;
+		}
+	}
+}
+
+.p-idea{
+	p{
+		margin: 0 0 9%; 
+	}
+}
+
+.mobile3{
+	padding-top: 3%;
+
+}
+
+.text-mobile3{
+	h4{
+		font-weight: bold;
+		margin-bottom: 16px;
+	}
+
+	p{
+		padding-bottom: 27%;
+	}
+}
+
+.fa-stack {
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    font-size: 15px;
+    color: $text-box1;
+    border: 1px solid $text-box1;
+    margin: 0 4px;
+    border-radius: 100%;
+}
+
+@mixin icon-hover($bg-color){
+	border: 1px solid transparent;
+	color: #fff;
+    background: $bg-color;
+}
+
+.fa-facebook{
+	@extend .fa-stack;
+	&:hover{
+		@include icon-hover(#4060A5);
+	}
+}
+
+.fa-google-plus{
+	@extend .fa-stack;
+	&:hover{
+		@include icon-hover(#e64522);
+	}
+}
+
+.fa-twitter{
+	@extend .fa-stack;
+	&:hover{
+		@include icon-hover(#00ABE3);
+	}
+}
+
+.fa-instagram{
+	@extend .fa-stack;
+	&:hover{
+		@include icon-hover(#517fa4);
+	}
+}
+
+footer{
+	p{
+		margin: 21px 0;
+	}
+}
+
+   
+
+   
+
+
+
